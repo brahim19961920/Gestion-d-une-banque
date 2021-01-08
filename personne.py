@@ -20,8 +20,3 @@ class Personne:
     #Méthode affichant les informations d'une Personne         
     def __str__(self):
         return"Informations sur la personne:\ncin: {} \nPrénom:{} \nNom: {}\nnuméro de télephone:{}".format(self.cin,self.prenom,self.nom,self.numtel) 
-
-
-
-
-
