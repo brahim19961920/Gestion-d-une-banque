@@ -26,9 +26,20 @@ class Compte:
         self.retraits=retraits
         self.client=client
     
+    #méthode pour déposer une somme d'argent dans le compte
+    def deposer(self,somme):
+        self.depots.append(somme)
+    
+    #méthode pour retirer une somme d'argent dans le compte
+    def retirer(self,somme):
+        if(sum(self.depots)-somme>=0):
+            self.retraits.append(somme)
 
+    #méthode pour retourner le solde du compte
     def getSolde(self):
        return sum(self.depots)-sum(self.retraits)
-
+    
+    #méthode pour retourner une représentation du compte sous forme de str
     def __str__(self):
      return("Numéro de compte: "+self.num_compte+"\n"+str(self.client)+"\nSolde: "+str(self.getSolde()))
+
